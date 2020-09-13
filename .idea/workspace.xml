@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="" />
+    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Resources" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -65,27 +70,35 @@
   <component name="SvnConfiguration">
     <configuration />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="video and image caprure" />
+    <option name="LAST_COMMIT_MESSAGE" value="video and image caprure" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599510670798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1599510670798" />
-    <state width="671" height="201" key="GridCell.Tab.0.bottom" timestamp="1599690505213">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1599993526172">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="671" height="201" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599690505213" />
-    <state width="671" height="201" key="GridCell.Tab.0.center" timestamp="1599690505213">
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1599993526172" />
+    <state width="1343" height="184" key="GridCell.Tab.0.bottom" timestamp="1599994566314">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="671" height="201" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599690505213" />
-    <state width="671" height="201" key="GridCell.Tab.0.left" timestamp="1599690505213">
+    <state width="1343" height="184" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
+    <state width="1343" height="184" key="GridCell.Tab.0.center" timestamp="1599994566314">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="671" height="201" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599690505213" />
-    <state width="671" height="201" key="GridCell.Tab.0.right" timestamp="1599690505213">
+    <state width="1343" height="184" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
+    <state width="1343" height="184" key="GridCell.Tab.0.left" timestamp="1599994566313">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="671" height="201" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599690505213" />
+    <state width="1343" height="184" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599994566313" />
+    <state width="1343" height="184" key="GridCell.Tab.0.right" timestamp="1599994566314">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1343" height="184" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
     <state x="206" y="52" key="SettingsEditor" timestamp="1599992983069">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
