@@ -4,7 +4,18 @@ import numpy as np
 # kernel = np.ones((5,5),np.uint8)
 
 ######Read Image from resources file######
-# img=cv2.imread("Resources/stronggirl.jpg")
+img=cv2.imread("Resources/cards2.jpg")
+print(img.shape)
+imgResize = cv2.resize(img,(300,177))
+
+width, height = 250, 350
+
+#######
+pts1 = np.float32([[11,219],[287,188],[154,482],[352,440]]) #find points from paint
+pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
+
+matrix = cv2.getPerspectiveTransform(pts1,pts2)
+imgOutput = cv2.warpPerspective(imgResize,matrix,(width,height))
 
 ######Various Operations on Image#####
 # imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -16,17 +27,18 @@ import numpy as np
 # imgCropped = img[0:400,400:600]
 
 ###########Creating a matrix and coloring it############
-img = np.zeros((512,512,3),np.uint8)
+# img = np.zeros((512,512,3),np.uint8)
 # print(img)
 # img[:]=255,0,0
 
-cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
-cv2.rectangle(img,(0,0),(250,350),(0,0,255),2) #use cv2.FILLED instead of 2 if u want it filled
-cv2.circle(img,(400,50),30,(255,255,0),3)
-cv2.putText(img," ozge onec ",(300,200),cv2.FONT_ITALIC,1,(0,255,255),2)
+# cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
+# cv2.rectangle(img,(0,0),(250,350),(0,0,255),2) #use cv2.FILLED instead of 2 if u want it filled
+# cv2.circle(img,(400,50),30,(255,255,0),3)
+# cv2.putText(img," ozge onec ",(300,200),cv2.FONT_ITALIC,1,(0,255,255),2)
 
 ######Showing the Image#######
 cv2.imshow("Image",img)
+cv2.imshow("Output", imgOutput)
 # cv2.imshow("Image Resized",imgResize)
 # cv2.imshow("Image Cropped",imgCropped)
 # cv2.imshow("Gray Image",imgGray)
