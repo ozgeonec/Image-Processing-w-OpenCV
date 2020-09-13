@@ -8,5 +8,9 @@
 
 ![ocvimagecropresize](https://user-images.githubusercontent.com/53258721/93021249-61316180-f5ea-11ea-96ac-659af88d6ef9.JPG)
 
+### Process 3- Creating a matrix image and adding shapes and text 
+
+![ocvimagetext](https://user-images.githubusercontent.com/53258721/93022143-2f22fe00-f5f0-11ea-8247-fe2bf7018570.JPG)
+
 
 
