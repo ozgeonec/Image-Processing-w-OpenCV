@@ -72,33 +72,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="video and image caprure" />
     <MESSAGE value="played a video" />
-    <option name="LAST_COMMIT_MESSAGE" value="played a video" />
+    <MESSAGE value="connecting to device's camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="connecting to device's camera" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599510670798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1599510670798" />
-    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1599995481356">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1599995793970">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1599995481356" />
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1599995724232">
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1599995793970" />
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1600006446203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
-    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1599995724232">
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600006446203" />
+    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1600006446202">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
-    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1599995724231">
+    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600006446202" />
+    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1600006446202">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599995724231" />
-    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1599995724232">
+    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600006446202" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1600006446203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600006446203" />
     <state x="206" y="52" key="SettingsEditor" timestamp="1599992983069">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
