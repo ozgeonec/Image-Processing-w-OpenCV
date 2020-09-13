@@ -4,7 +4,7 @@ import numpy as np
 # kernel = np.ones((5,5),np.uint8)
 
 ######Read Image from resources file######
-img=cv2.imread("Resources/stronggirl.jpg")
+# img=cv2.imread("Resources/stronggirl.jpg")
 
 ######Various Operations on Image#####
 # imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -14,6 +14,16 @@ img=cv2.imread("Resources/stronggirl.jpg")
 # imgEroded = cv2.erode(imgDialation,kernel,iterations=1)
 # imgResize = cv2.resize(img,(600,300))
 # imgCropped = img[0:400,400:600]
+
+###########Creating a matrix and coloring it############
+img = np.zeros((512,512,3),np.uint8)
+# print(img)
+# img[:]=255,0,0
+
+cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
+cv2.rectangle(img,(0,0),(250,350),(0,0,255),2) #use cv2.FILLED instead of 2 if u want it filled
+cv2.circle(img,(400,50),30,(255,255,0),3)
+cv2.putText(img," ozge onec ",(300,200),cv2.FONT_ITALIC,1,(0,255,255),2)
 
 ######Showing the Image#######
 cv2.imshow("Image",img)
@@ -26,8 +36,8 @@ cv2.imshow("Image",img)
 # cv2.imshow("Eroded Image", imgEroded)
 
 #######To see the Dimensions of the image######
-print(img.shape)
-print(imgResize.shape)
+# print(img.shape)
+# print(imgResize.shape)
 
 
 ######Preventing the image vanishing#######
