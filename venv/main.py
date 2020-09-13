@@ -6,16 +6,16 @@ import numpy as np
 ######Read Image from resources file######
 img=cv2.imread("Resources/cards2.jpg")
 print(img.shape)
-imgResize = cv2.resize(img,(300,177))
+
 
 width, height = 250, 350
 
 #######
-pts1 = np.float32([[11,219],[287,188],[154,482],[352,440]]) #find points from paint
+pts1 = np.float32([[111,219],[287,188],[154,482],[352,440]]) #find points from paint
 pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
 
 matrix = cv2.getPerspectiveTransform(pts1,pts2)
-imgOutput = cv2.warpPerspective(imgResize,matrix,(width,height))
+imgOutput = cv2.warpPerspective(img,matrix,(width,height))
 
 ######Various Operations on Image#####
 # imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
