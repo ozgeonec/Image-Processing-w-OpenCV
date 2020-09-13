@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
     </list>
@@ -72,33 +71,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="video and image caprure" />
-    <option name="LAST_COMMIT_MESSAGE" value="video and image caprure" />
+    <MESSAGE value="played a video" />
+    <option name="LAST_COMMIT_MESSAGE" value="played a video" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599510670798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1599510670798" />
-    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1599993526172">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1599995481356">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1599993526172" />
-    <state width="1343" height="184" key="GridCell.Tab.0.bottom" timestamp="1599994566314">
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1599995481356" />
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1599995724232">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="184" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
-    <state width="1343" height="184" key="GridCell.Tab.0.center" timestamp="1599994566314">
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
+    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1599995724232">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="184" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
-    <state width="1343" height="184" key="GridCell.Tab.0.left" timestamp="1599994566313">
+    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
+    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1599995724231">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="184" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599994566313" />
-    <state width="1343" height="184" key="GridCell.Tab.0.right" timestamp="1599994566314">
+    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599995724231" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1599995724232">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="184" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599994566314" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599995724232" />
     <state x="206" y="52" key="SettingsEditor" timestamp="1599992983069">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
