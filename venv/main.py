@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 
-################Copied Funtion###############
+
+################Copied Stacking Function###############
 def stackImages(scale,imgArray):
     rows = len(imgArray)
     cols = len(imgArray[0])
@@ -33,50 +34,61 @@ def stackImages(scale,imgArray):
         ver = hor
     return ver
 
+##############Shape Detection###################
+img=cv2.imread("Resources/shapes.png")
+
+imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+imgBlur = cv2.blur(imgGray,(7,7),1)
+imgStack = stackImages(0.6,([img,imgGray,imgBlur]))
+imgCanny = cv2.Canny(imgBlur,50,50)
+
 # kernel = np.ones((5,5),np.uint8)
 
 ######Read Image from resources file######
 
 
 
-def empty(a):
-    pass
-##########Detecting Color/Color Picking/Masking#############
+# def empty(a):
+#     pass
+# ##########Detecting Color/Color Picking/Masking#############
+#
+#
+# #########Trackbars Creation#############
+# cv2.namedWindow("Trackbars")
+# cv2.resizeWindow("Trackbars",640,240)
+# cv2.createTrackbar("Hue min","Trackbars",0,179,empty)
+# cv2.createTrackbar("Hue max","Trackbars",19,179,empty)
+# cv2.createTrackbar("Saturation min","Trackbars",110,255,empty)
+# cv2.createTrackbar("Saturation max","Trackbars",240,255,empty)
+# cv2.createTrackbar("Value min","Trackbars",153,255,empty)
+# cv2.createTrackbar("Value max","Trackbars",255,255,empty)
+#
+#
+# while True:
+#  img=cv2.imread("Resources/lambo.png")
+#  imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+#  h_min = cv2.getTrackbarPos("Hue min","Trackbars")
+#  h_max = cv2.getTrackbarPos("Hue max","Trackbars")
+#  s_min = cv2.getTrackbarPos("Saturation min","Trackbars")
+#  s_max = cv2.getTrackbarPos("Saturation max","Trackbars")
+#  v_min = cv2.getTrackbarPos("Value min","Trackbars")
+#  v_max = cv2.getTrackbarPos("Value max","Trackbars")
+#  print(h_max,h_min,s_max,s_min,v_max,v_min)
+#  lower = np.array([h_min,s_min,v_min])
+#  upper = np.array([h_max,s_max,v_max])
+#  mask = cv2.inRange(imgHSV,lower,upper)
+#  imgResult = cv2.bitwise_and(img,img,mask=mask)
+#  #
+#  # cv2.imshow("HSV",imgHSV)
+#  # cv2.imshow("Mask",mask)
+#  # cv2.imshow("Result",imgResult)
+#
+#  imgStack = stackImages(0.6,([img,imgHSV],[mask,imgResult]))
+#  cv2.imshow("Stacked Images", imgStack)
 
-
-#########Trackbars Creation#############
-cv2.namedWindow("Trackbars")
-cv2.resizeWindow("Trackbars",640,240)
-cv2.createTrackbar("Hue min","Trackbars",0,179,empty)
-cv2.createTrackbar("Hue max","Trackbars",19,179,empty)
-cv2.createTrackbar("Saturation min","Trackbars",110,255,empty)
-cv2.createTrackbar("Saturation max","Trackbars",240,255,empty)
-cv2.createTrackbar("Value min","Trackbars",153,255,empty)
-cv2.createTrackbar("Value max","Trackbars",255,255,empty)
-
-
-while True:
- img=cv2.imread("Resources/lambo.png")
- imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
- h_min = cv2.getTrackbarPos("Hue min","Trackbars")
- h_max = cv2.getTrackbarPos("Hue max","Trackbars")
- s_min = cv2.getTrackbarPos("Saturation min","Trackbars")
- s_max = cv2.getTrackbarPos("Saturation max","Trackbars")
- v_min = cv2.getTrackbarPos("Value min","Trackbars")
- v_max = cv2.getTrackbarPos("Value max","Trackbars")
- print(h_max,h_min,s_max,s_min,v_max,v_min)
- lower = np.array([h_min,s_min,v_min])
- upper = np.array([h_max,s_max,v_max])
- mask = cv2.inRange(imgHSV,lower,upper)
- imgResult = cv2.bitwise_and(img,img,mask=mask)
- # cv2.imshow("Image",img)
- # cv2.imshow("HSV",imgHSV)
- # cv2.imshow("Mask",mask)
- # cv2.imshow("Result",imgResult)
-
- imgStack = stackImages(0.6,([img,imgHSV],[mask,imgResult]))
- cv2.imshow("Stacked Images", imgStack)
- cv2.waitKey(1)
+cv2.imshow("Image Stack",imgStack)
+cv2.imshow("Image Canny",imgCanny)
+cv2.waitKey(0)
 
 
 ######Stacking Images######
