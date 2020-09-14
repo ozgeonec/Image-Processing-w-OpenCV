@@ -4,21 +4,44 @@ import numpy as np
 # kernel = np.ones((5,5),np.uint8)
 
 ######Read Image from resources file######
-img=cv2.imread("Resources/lambo.png")
-print(img.shape)
+
+
 
 def empty(a):
     pass
 ##########Detecting Color#############
-imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+
+
+#########Trackbars Creation#############
 cv2.namedWindow("Trackbars")
 cv2.resizeWindow("Trackbars",640,240)
 cv2.createTrackbar("Hue min","Trackbars",0,179,empty)
-cv2.createTrackbar("Hue max","Trackbars",179,179,empty)
-cv2.createTrackbar("Saturation min","Trackbars",0,255,empty)
-cv2.createTrackbar("Saturation max","Trackbars",255,255,empty)
-cv2.createTrackbar("Value min","Trackbars",0,255,empty)
+cv2.createTrackbar("Hue max","Trackbars",19,179,empty)
+cv2.createTrackbar("Saturation min","Trackbars",110,255,empty)
+cv2.createTrackbar("Saturation max","Trackbars",240,255,empty)
+cv2.createTrackbar("Value min","Trackbars",153,255,empty)
 cv2.createTrackbar("Value max","Trackbars",255,255,empty)
+
+
+while True:
+ img=cv2.imread("Resources/lambo.png")
+ imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+ h_min = cv2.getTrackbarPos("Hue min","Trackbars")
+ h_max = cv2.getTrackbarPos("Hue max","Trackbars")
+ s_min = cv2.getTrackbarPos("Saturation min","Trackbars")
+ s_max = cv2.getTrackbarPos("Saturation max","Trackbars")
+ v_min = cv2.getTrackbarPos("Value min","Trackbars")
+ v_max = cv2.getTrackbarPos("Value max","Trackbars")
+ print(h_max,h_min,s_max,s_min,v_max,v_min)
+ lower = np.array([h_min,s_min,v_min])
+ upper = np.array([h_max,s_max,v_max])
+ mask = cv2.inRange(imgHSV,lower,upper)
+ imgResult = cv2.bitwise_and(img,img,mask=mask)
+ cv2.imshow("Image",img)
+ cv2.imshow("HSV",imgHSV)
+ cv2.imshow("Mask",mask)
+ cv2.imshow("Result",imgResult)
+ cv2.waitKey(1)
 
 
 ######Stacking Images######
@@ -54,8 +77,7 @@ cv2.createTrackbar("Value max","Trackbars",255,255,empty)
 # cv2.putText(img," ozge onec ",(300,200),cv2.FONT_ITALIC,1,(0,255,255),2)
 
 ######Showing the Image#######
-cv2.imshow("Image",img)
-cv2.imshow("HSV",imgHSV)
+
 #cv2.imshow("Output", imgOutput)
 # cv2.imshow("Image Resized",imgResize)
 # cv2.imshow("Image Cropped",imgCropped)
@@ -71,7 +93,7 @@ cv2.imshow("HSV",imgHSV)
 
 
 ######Preventing the image vanishing#######
-cv2.waitKey(0)
+
 
 
 ######Capturing and showing a video#######
