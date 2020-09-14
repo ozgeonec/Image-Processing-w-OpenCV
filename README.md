@@ -16,5 +16,12 @@
 
 ![ocvimageperspective](https://user-images.githubusercontent.com/53258721/93023244-57adf680-f5f6-11ea-8147-96bd8fbc408b.JPG)
 
+### Process 5- Color Detection
+
+Finding the saturation, Hue and Value of the color we choose(which is orange in this example)
+![ocvimagemasking2](https://user-images.githubusercontent.com/53258721/93095493-d4e77300-f6ab-11ea-95f1-7080b5cfd28a.JPG)
+
+Masking the selected color
+![ocvimagecolorpicking](https://user-images.githubusercontent.com/53258721/93095553-e92b7000-f6ab-11ea-9513-50a9eea871e2.JPG)
 
 
