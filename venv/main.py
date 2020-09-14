@@ -4,18 +4,35 @@ import numpy as np
 # kernel = np.ones((5,5),np.uint8)
 
 ######Read Image from resources file######
-img=cv2.imread("Resources/cards2.jpg")
+img=cv2.imread("Resources/lambo.png")
 print(img.shape)
 
+def empty(a):
+    pass
+##########Detecting Color#############
+imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+cv2.namedWindow("Trackbars")
+cv2.resizeWindow("Trackbars",640,240)
+cv2.createTrackbar("Hue min","Trackbars",0,179,empty)
+cv2.createTrackbar("Hue max","Trackbars",179,179,empty)
+cv2.createTrackbar("Saturation min","Trackbars",0,255,empty)
+cv2.createTrackbar("Saturation max","Trackbars",255,255,empty)
+cv2.createTrackbar("Value min","Trackbars",0,255,empty)
+cv2.createTrackbar("Value max","Trackbars",255,255,empty)
 
-width, height = 250, 350
 
-#######
-pts1 = np.float32([[111,219],[287,188],[154,482],[352,440]]) #find points from paint
-pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
+######Stacking Images######
+# imgHor = np.hstack((img,img))
+# imgVer = np.vstack((img,img))
+# cv2.imshow("horizontal",imgHor)
+# cv2.imshow("vertical", imgVer)
 
-matrix = cv2.getPerspectiveTransform(pts1,pts2)
-imgOutput = cv2.warpPerspective(img,matrix,(width,height))
+####### Wrap Prespective Ops.#############
+# width, height = 250, 350
+# pts1 = np.float32([[111,219],[287,188],[154,482],[352,440]]) #find points from paint
+# pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
+# matrix = cv2.getPerspectiveTransform(pts1,pts2)
+# imgOutput = cv2.warpPerspective(img,matrix,(width,height))
 
 ######Various Operations on Image#####
 # imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -38,7 +55,8 @@ imgOutput = cv2.warpPerspective(img,matrix,(width,height))
 
 ######Showing the Image#######
 cv2.imshow("Image",img)
-cv2.imshow("Output", imgOutput)
+cv2.imshow("HSV",imgHSV)
+#cv2.imshow("Output", imgOutput)
 # cv2.imshow("Image Resized",imgResize)
 # cv2.imshow("Image Cropped",imgCropped)
 # cv2.imshow("Gray Image",imgGray)
