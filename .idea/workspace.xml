@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="">
+    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="Shape Detection Process 2-Contour Shapes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
     </list>
@@ -24,7 +24,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -66,8 +65,19 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="video and image caprure" />
@@ -82,33 +92,38 @@
     <MESSAGE value="Masking the desired part of an image" />
     <MESSAGE value="Color Picking" />
     <MESSAGE value="Shape Detection Process 1-Gray,Blur,Canny" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shape Detection Process 1-Gray,Blur,Canny" />
+    <MESSAGE value="Shape Detection Process 2-Contour Shapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shape Detection Process 2-Contour Shapes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599510670798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1599510670798" />
-    <state x="440" y="0" key="CommitChangelistDialog2" timestamp="1600108841130">
+    <state x="363" y="119" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600119111807">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="440" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1600108841130" />
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1600111896341">
+    <state x="363" y="119" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1600119111807" />
+    <state x="-138" y="0" key="CommitChangelistDialog2" timestamp="1600118741460">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600111896341" />
-    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1600111896341">
+    <state x="-138" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1600118741460" />
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1600167997904">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600111896341" />
-    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1600111896341">
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600167997904" />
+    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1600167997904">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600111896341" />
-    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1600111896341">
+    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600167997904" />
+    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1600167997904">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600111896341" />
+    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600167997904" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1600167997904">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600167997904" />
     <state width="1343" height="229" key="GridCell.Tab.1.bottom" timestamp="1600111724936">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

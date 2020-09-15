@@ -34,21 +34,31 @@ def stackImages(scale,imgArray):
         ver = hor
     return ver
 
+#############Contour Ops##############
 def getContours(img):
     contours,hierarchy = cv2.findContours(img,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
     for cnt in contours:
         area = cv2.contourArea(cnt)
         print(area)
+        #if area>500: Check treshold
         cv2.drawContours(imgContour,cnt,-1,(255,0,0),3)
+        prmtr = cv2.arcLength(cnt,True)
+        print(prmtr)
+        cornerPoints = cv2.approxPolyDP(cnt,0.02*prmtr,True)
+        print(len(cornerPoints))
+        corners = len(cornerPoints)
+        x, y, w, h = cv2.boundingRect(cornerPoints)
+
+        cv2.rectangle(imgContour,(x,y),(x+w,y+h),(0,255,0),2)
 
 ##############Shape Detection###################
 img=cv2.imread("Resources/shapes.png")
 imgContour = img.copy()
 
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-imgBlur = cv2.blur(imgGray,(7,7),1)
+imgBlur = cv2.blur(imgGray,(5,5),1)
 imgStack = stackImages(0.6,([img,imgGray,imgBlur]))
-imgCanny = cv2.Canny(imgBlur,50,50)
+imgCanny = cv2.Canny(imgBlur,200,300)
 getContours(imgCanny)
 
 
