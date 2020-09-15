@@ -39,27 +39,56 @@ def getContours(img):
     contours,hierarchy = cv2.findContours(img,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
     for cnt in contours:
         area = cv2.contourArea(cnt)
-        print(area)
-        #if area>500: Check treshold
+        #print(area)
+        #Check treshold
+    #if area>2:
         cv2.drawContours(imgContour,cnt,-1,(255,0,0),3)
         prmtr = cv2.arcLength(cnt,True)
-        print(prmtr)
         cornerPoints = cv2.approxPolyDP(cnt,0.02*prmtr,True)
         print(len(cornerPoints))
         corners = len(cornerPoints)
         x, y, w, h = cv2.boundingRect(cornerPoints)
 
-        cv2.rectangle(imgContour,(x,y),(x+w,y+h),(0,255,0),2)
+        if corners == 3: objType = "Triangle"
+        elif corners == 4: objType= "Rectangle"
+        elif corners > 4: objType= "Circle"
+        else: objType= "None"
+
+
+        cv2.rectangle(imgContour,(x,y),(x+w,y+h),(0,255,0),1)
+        cv2.putText(imgContour,objType,
+                    (x+(w//2)-10,y+(h//2)-10),cv2.FONT_HERSHEY_COMPLEX,0.5,(0,0,0),1)
+
 
 ##############Shape Detection###################
 img=cv2.imread("Resources/shapes.png")
 imgContour = img.copy()
 
+# def empty(a):
+#      pass
+
+
+
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 imgBlur = cv2.blur(imgGray,(5,5),1)
-imgStack = stackImages(0.6,([img,imgGray,imgBlur]))
-imgCanny = cv2.Canny(imgBlur,200,300)
+imgStack = stackImages(0.5,([img,imgGray,imgBlur]))
+imgCanny = cv2.Canny(imgBlur,15,305)
 getContours(imgCanny)
+
+# while True:
+#  imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+#
+#  cv2.createTrackbar("Canny min","Trackbars",0,179,empty)
+#  cv2.createTrackbar("Canny max","Trackbars",19,179,empty)
+#
+#  c_min = cv2.getTrackbarPos("Canny min","Trackbars")
+#  c_max = cv2.getTrackbarPos("Canny max","Trackbars")
+#
+#  lower = np.array([c_min])
+#  upper = np.array([c_max])
+#  mask = cv2.inRange(imgHSV,lower,upper)
+#  imgResult = cv2.bitwise_and(img,img,mask=mask)
+#  cv2.imshow("HSV",imgHSV)
 
 
 
