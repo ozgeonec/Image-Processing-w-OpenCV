@@ -19,7 +19,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="Shape Detection Process 3-Applying operations to recognize shapes">
+    <list default="true" id="0a129dbe-ad47-4c99-a096-2cfa96697ebd" name="Default Changelist" comment="Shape Detection Process 3-Applying operations to recognize shapes continued">
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_eye.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_eye_tree_eyeglasses.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalcatface.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalcatface_extended.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalface_alt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalface_alt2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalface_alt_tree.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_fullbody.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_lefteye_2splits.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_licence_plate_rus_16stages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_lowerbody.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_profileface.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_righteye_2splits.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_russian_plate_number.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_smile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/haarcascades/haarcascade_upperbody.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Resources/lena.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
     </list>
@@ -124,7 +142,8 @@
     <MESSAGE value="Shape Detection Process 2-Contour Shapes" />
     <MESSAGE value="Shape Detection Process 3-Finding corner points and bounding shapes in a rectangle" />
     <MESSAGE value="Shape Detection Process 3-Applying operations to recognize shapes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shape Detection Process 3-Applying operations to recognize shapes" />
+    <MESSAGE value="Shape Detection Process 3-Applying operations to recognize shapes continued" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shape Detection Process 3-Applying operations to recognize shapes continued" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599510670798">
@@ -139,22 +158,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="519" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1600168135355" />
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1600254680426">
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom" timestamp="1600255592341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600254680426" />
-    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1600254680426">
+    <state width="1343" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600255592341" />
+    <state width="1343" height="202" key="GridCell.Tab.0.center" timestamp="1600255592341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600254680426" />
-    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1600254680426">
+    <state width="1343" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600255592341" />
+    <state width="1343" height="202" key="GridCell.Tab.0.left" timestamp="1600255592341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600254680426" />
-    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1600254680426">
+    <state width="1343" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600255592341" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right" timestamp="1600255592341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600254680426" />
+    <state width="1343" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600255592341" />
     <state width="1343" height="229" key="GridCell.Tab.1.bottom" timestamp="1600111724936">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -175,9 +194,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="206" y="52" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1599992983069" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1600209978294">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1600254719606">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1600209978294" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1600254719606" />
   </component>
 </project>
