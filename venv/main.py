@@ -2,6 +2,58 @@ import cv2
 import numpy as np
 
 
+frameWidth = 640
+frameHeight = 480
+cap = cv2.VideoCapture(0)
+cap.set(3, frameWidth)
+cap.set(4, frameHeight)
+
+myColors=[[5,107,0,19,255,255],[135,179,134,255,10,255],[30,179,65,255,159,255]]
+# def empty(a):
+#     pass
+
+# cv2.namedWindow("HSV")
+# cv2.resizeWindow("HSV", 640, 240)
+# cv2.createTrackbar("HUE Min", "HSV", 0, 179, empty)
+# cv2.createTrackbar("HUE Max", "HSV", 179, 179, empty)
+# cv2.createTrackbar("SAT Min", "HSV", 0, 255, empty)
+# cv2.createTrackbar("SAT Max", "HSV", 255, 255, empty)
+# cv2.createTrackbar("VALUE Min", "HSV", 0, 255, empty)
+# cv2.createTrackbar("VALUE Max", "HSV", 255, 255, empty)
+#0,179,145,255,103,255
+def findColors(img,myColors):
+    imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    lower = np.array(myColors[0][0:3])
+    upper = np.array(myColors[0][3:6])
+    mask = cv2.inRange(imgHsv, lower, upper)
+    cv2.imshow("img",mask)
+
+while True:
+    success, img = cap.read()
+    #imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+
+    # h_min = cv2.getTrackbarPos("HUE Min", "HSV")
+    # h_max = cv2.getTrackbarPos("HUE Max", "HSV")
+    # s_min = cv2.getTrackbarPos("SAT Min", "HSV")
+    # s_max = cv2.getTrackbarPos("SAT Max", "HSV")
+    # v_min = cv2.getTrackbarPos("VALUE Min", "HSV")
+    # v_max = cv2.getTrackbarPos("VALUE Max", "HSV")
+    # print(h_min)
+
+
+    # result = cv2.bitwise_and(img, img, mask=mask)
+    #
+    # mask = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
+    # hStack = np.hstack([img, mask, result])
+    # cv2.imshow('Horizontal Stacking', hStack)
+    findColors(img,myColors)
+    cv2.imshow("Result",img)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# cap.release()
+# cv2.destroyAllWindows()
+
 ################Copied Stacking Function###############
 # def stackImages(scale,imgArray):
 #     rows = len(imgArray)
@@ -64,15 +116,15 @@ import numpy as np
 
 
 ##############Shape Detection###################
-
-faceCascade= cv2.CascadeClassifier("Resources/haarcascades/haarcascade_frontalface_default.xml")
-img=cv2.imread("Resources/stronggirl.jpg")
-imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-
-faces = faceCascade.detectMultiScale(imgGray,1.1,4)
-
-for (x,y,w,h) in faces:
-    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+#############Face Detection###################
+# faceCascade= cv2.CascadeClassifier("Resources/haarcascades/haarcascade_frontalface_default.xml")
+# img=cv2.imread("Resources/stronggirl.jpg")
+# imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+#
+# faces = faceCascade.detectMultiScale(imgGray,1.1,4)
+#
+# for (x,y,w,h) in faces:
+#     cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
 # imgContour = img.copy()
 
 # def empty(a):
@@ -151,8 +203,8 @@ for (x,y,w,h) in faces:
 # cv2.imshow("Image Canny",imgCanny)
 # cv2.imshow("Image Contour",imgContour)
 
-cv2.imshow("Image",img)
-cv2.waitKey(0)
+# cv2.imshow("Image",img)
+# cv2.waitKey(0)
 
 
 ######Stacking Images######
