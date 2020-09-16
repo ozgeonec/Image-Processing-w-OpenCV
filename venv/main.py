@@ -2,13 +2,13 @@ import cv2
 import numpy as np
 
 
-frameWidth = 640
-frameHeight = 480
+frameWidth = 440
+frameHeight = 280
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
 
-myColors=[[5,107,0,19,255,255],[135,179,134,255,10,255],[30,179,65,255,159,255]]
+myColors=[[5,107,0,19,255,255],[133,56,0,159,156,255],[57,76,0,100,255,255]]
 # def empty(a):
 #     pass
 
@@ -23,10 +23,11 @@ myColors=[[5,107,0,19,255,255],[135,179,134,255,10,255],[30,179,65,255,159,255]]
 #0,179,145,255,103,255
 def findColors(img,myColors):
     imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    lower = np.array(myColors[0][0:3])
-    upper = np.array(myColors[0][3:6])
-    mask = cv2.inRange(imgHsv, lower, upper)
-    cv2.imshow("img",mask)
+    for color in myColors:
+      lower = np.array(color[0:3])
+      upper = np.array(color[3:6])
+      mask = cv2.inRange(imgHsv, lower, upper)
+      cv2.imshow(str(color[0]),mask)
 
 while True:
     success, img = cap.read()
