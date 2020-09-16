@@ -31,4 +31,10 @@ First step is Canny Edge Detection:
 Then we bound each shape in a rectangle
 ![ocvshapedetection3](https://user-images.githubusercontent.com/53258721/93204388-b2faf880-f75e-11ea-969a-5cf07eda25f1.JPG)
 
+###Process 7- Face Detection with Haarcascade Library
+
+![ocvfacedetection](https://user-images.githubusercontent.com/53258721/93331891-a394b180-f829-11ea-9a9f-5c30898fea4b.JPG)
+![ocvfacedetection2](https://user-images.githubusercontent.com/53258721/93331897-a68fa200-f829-11ea-9bd0-162f2fa1d892.JPG)
+
+
 
