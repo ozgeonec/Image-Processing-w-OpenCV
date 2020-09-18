@@ -13,6 +13,9 @@ myColorValues = [[51,153,255],          ## BGR
                  [255,0,255],
                  [0,255,0],
                  [255,0,0]]
+
+myPoints =  []  ## [x , y , colorId ]
+
 # def empty(a):
 #     pass
 
@@ -28,6 +31,7 @@ myColorValues = [[51,153,255],          ## BGR
 def findColors(img,myColors,myColorValues):
     count = 0
     imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    newPoints=[]
     for color in myColors:
       lower = np.array(color[0:3])
       upper = np.array(color[3:6])
@@ -35,7 +39,10 @@ def findColors(img,myColors,myColorValues):
       x,y=getContours(mask)
       cv2.circle(imgResult,(x,y),15,myColorValues[count],cv2.FILLED)
       cv2.imshow(str(color[0]),mask)
+      if x!=0 and y!=0:
+            newPoints.append([x,y,count])
       count += 1
+    return newPoints
 
 def getContours(img):
     contours,hierarchy = cv2.findContours(img,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
@@ -44,14 +51,25 @@ def getContours(img):
         area = cv2.contourArea(cnt)
         #Check treshold
     #if area>2:
-        cv2.drawContours(imgResult,cnt,-1,(255,0,0),3)
+        #cv2.drawContours(imgResult,cnt,-1,(255,0,0),3)
         prmtr = cv2.arcLength(cnt,True)
         cornerPoints = cv2.approxPolyDP(cnt,0.02*prmtr,True)
         x, y, w, h = cv2.boundingRect(cornerPoints)
     return x*w//2,y
+
+def drawOnCanvas(myPoints,myColorValues):
+    for point in myPoints:
+        cv2.circle(imgResult, (point[0], point[1]), 10, myColorValues[point[2]], cv2.FILLED)
+
 while True:
     success, img = cap.read()
     imgResult = img.copy()
+    newPoints = findColors(img, myColors,myColorValues)
+    if len(newPoints)!=0:
+        for newP in newPoints:
+            myPoints.append(newP)
+    if len(myPoints)!=0:
+        drawOnCanvas(myPoints,myColorValues)
     #imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     # h_min = cv2.getTrackbarPos("HUE Min", "HSV")
